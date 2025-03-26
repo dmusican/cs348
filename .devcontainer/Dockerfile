@@ -6,8 +6,6 @@ RUN apt-get -y install vim
 RUN apt-get -y install zip
 RUN apt-get -y install curl
 
-# create a csuser for use rather than root
-RUN useradd -ms /bin/bash csuser
 USER ubuntu
 
 # https://sdkman.io/install
