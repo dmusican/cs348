@@ -4,6 +4,8 @@ RUN apt-get -y update
 RUN apt-get -y install git
 RUN apt-get -y install vim
 RUN apt-get -y install zip
+RUN apt-get -y install htop
+RUN apt-get -y install python3
 RUN apt-get -y update
 RUN apt-get -y install curl
 
