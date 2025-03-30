@@ -1,3 +1,0 @@
-How to build it:
-
-docker buildx build --builder cloud-dmusicant-mybuilder --platform linux/amd64,linux/arm64 --tag dmusicant/cs348-images:2025-03-30 --push .
