@@ -7,15 +7,15 @@ COURSE_DIR=/cs348
 
 # Build the container if it does not already exist
 CONTAINER_LOOKUP=$(docker images $CONTAINER_NAME --format "{{.Repository}}")
-# if [[ $CONTAINER_LOOKUP != $CONTAINER_NAME ]]; then
+if [[ $CONTAINER_LOOKUP != $CONTAINER_NAME ]]; then
         cd config
         docker build -f Dockerfile -t $CONTAINER_NAME .
         cd "$REPO_DIR"
-# fi
+fi
 
 # Mount with type=bind to allow changes made
 # inside the container to be visible on the host;
-# also cd into PL_DIR once the container is running
+# also cd into COURSE_DIR once the container is running
 
 docker run \
         -it \
